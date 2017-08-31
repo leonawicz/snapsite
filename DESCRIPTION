@@ -15,13 +15,13 @@ ByteCompile: true
 Url: https://github.com/leonawicz/snapsite
 BugReports: https://github.com/leonawicz/snapsite/issues
 Imports: 
-    DiagrammeR
+    DiagrammeR,
+    snapmeta
 Suggests: 
     testthat,
     knitr,
     rmarkdown,
-    covr,
-    snapmeta
+    covr
 Remotes:
     leonawicz/snapmeta
 VignetteBuilder: knitr
