@@ -37,8 +37,9 @@ This package is in early development. Examples are limited. At the moment it inc
 
 
 ```{r simple_verse_chart, echo = FALSE, results = "hide"}
-library(snapsite)
-verse_diagram(file_name = "man/figures/README-simple_verse_chart-1.svg", title = "Simplified overview of the SNAPverse")
+library(snapsite) # image may require creation outside of this chunk, commented out line below
+if(!file.exists("man/figures")) dir.create("man/figures")
+#verse_diagram(file_name = "man/figures/README-simple_verse_chart-1.svg", title = "Simplified overview of the SNAPverse")
 ```
 
 ```{r simple_verse_chart_echo, eval = FALSE}
