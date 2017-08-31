@@ -14,6 +14,8 @@ LazyData: true
 ByteCompile: true
 Url: https://github.com/leonawicz/snapsite
 BugReports: https://github.com/leonawicz/snapsite/issues
+Imports: 
+    DiagrammeR
 Suggests: 
     testthat,
     knitr,
@@ -23,3 +25,4 @@ Suggests:
 Remotes:
     leonawicz/snapmeta
 VignetteBuilder: knitr
+RoxygenNote: 6.0.1
