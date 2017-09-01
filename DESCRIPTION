@@ -16,7 +16,9 @@ Url: https://github.com/leonawicz/snapsite
 BugReports: https://github.com/leonawicz/snapsite/issues
 Imports: 
     DiagrammeR,
-    snapmeta
+    snapmeta,
+    magrittr,
+    dplyr
 Suggests: 
     testthat,
     knitr,
