@@ -2,4 +2,5 @@
 
 export(chart_satellites)
 export(chart_verse)
+export(make_pkg_icons)
 importFrom(magrittr,"%>%")

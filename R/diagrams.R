@@ -131,3 +131,31 @@ chart_satellites <- function(file_name, context = "all", selected = NULL,
                            width = width, height = height)
   invisible()
 }
+
+#' Make package icons
+#'
+#' Make package icon svg thumbail files.
+#'
+#' @param base_path output directory.
+#' @param width numeric, icon width.
+#'
+#' @return side effect of writing files.
+#' @export
+#'
+#' @examples
+#' \dontrun{make_pkg_icons}
+make_pkg_icons <- function(base_path = ".", width = 200){
+  pkgs <- snapmeta::sv_pkgs()
+  types <- unique(pkgs$type)
+  clrs <- c("Chartreuse3", "DarkOrchid", "Orange", "DodgerBlue", "#555555")[match(pkgs$type, types)]
+  purrr::walk2(pkgs$pkg, clrs,
+  ~({
+    file_name <- paste0(base_path, "/pkg_icon_", .x, ".svg")
+    DiagrammeR::create_node_df(
+      n = 1, type = "a", label = .x, fillcolor = .y, style = "filled", color = .y,
+      fontcolor = "white", shape = "rectangle", fontname = "arial", fixedsize = TRUE, width = 1) %>%
+      DiagrammeR::create_graph(attr_theme = NULL) %>%
+      DiagrammeR::export_graph(file_name = file_name, width = width)
+  })
+  )
+}
