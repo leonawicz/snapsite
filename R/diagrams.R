@@ -23,16 +23,16 @@ chart_verse <- function(file_name, context = "complete", title = NULL,
   pkgs <- snapmeta::sv_pkgs()
   types <- unique(pkgs$type)
   clrs <- c("Chartreuse3", "DarkOrchid", "Orange", "DodgerBlue", "#555555")[match(pkgs$type, types)]
-  hide_edge_idx <- c(rep(1, 11), 2, 1, 1, 2, 1)
+  hide_edge_idx <- c(rep(1, 15), 2, 1, 1, 2, 1)
 
   ndf <- DiagrammeR::create_node_df(
     n = nrow(pkgs), type = "a", label = pkgs$pkg, fillcolor = clrs, style = "filled", color = "#333333",
     fontcolor = "white", shape = "rectangle", fontname = "arial", fixedsize = TRUE, width = 1)
 
   edf <- DiagrammeR::create_edge_df(
-    from = c(rep(1, 3), 2, 4:5, 3, 7:10, 13:17),
-    to   = c(2, 3, 12, 4:11, 14:18),
-    arrowhead = c("normal", "none")[c(rep(1, 4), 2, 2, 1, rep(2, 5), 1, 1, 2, 1)],
+    from = c(rep(1, 3), 2, 5:6, 3, 8:11, 4, 13:15, 17:21),
+    to   = c(2:4, 5:12, 13:16, 18:22),
+    arrowhead = c("normal", "none")[c(rep(1, 4), 2, 2, 1, rep(2, 4), 1, rep(2, 4), 1, 1, 2, 1)],
     rel = "a",
     color = paste0("#333333", c("", "00")[hide_edge_idx]),
     penwidth = c(1, 0)[hide_edge_idx])
