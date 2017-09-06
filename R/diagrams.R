@@ -80,7 +80,7 @@ chart_satellites <- function(file_name, context = "all", selected = NULL,
                              file_type = NULL, title = NULL, width = 350, height = NULL){
   if(!context %in% c("all", "utils", "dev"))
     stop("`context` must be 'all', 'utils' or 'dev'.")
-  pkgs <- snapmeta::sv_pkgs() %>% dplyr::filter(.data[["type"]] == "satellite")
+  pkgs <- snapmeta::sv_pkgs() %>% dplyr::filter(.data[["type"]] == "satellite") # nolint
   if(context != "all"){
     if(context == "utils"){
       x <- c("apputils", "maputils", "snaputils")
@@ -114,7 +114,6 @@ chart_satellites <- function(file_name, context = "all", selected = NULL,
     from <- c(2, 3, 5)
     to <- c(3, 4, 6)
   }
-  types <- unique(pkgs$type)
 
   ndf <- DiagrammeR::create_node_df(
     n = nrow(pkgs), type = "a", label = pkgs$pkg, fillcolor = clrs, style = "filled", color = "#333333",
@@ -125,8 +124,8 @@ chart_satellites <- function(file_name, context = "all", selected = NULL,
     color = paste0("#333333", c("", "00")[hide_edge_idx]),
     penwidth = c(1, 0)[hide_edge_idx])
 
-  g <- DiagrammeR::create_graph(nodes_df=ndf, edges_df=edf, attr_theme = NULL) %>%
-    DiagrammeR::add_global_graph_attrs(attr = "rankdir",value =  "LR",attr_type =  "graph")
+  g <- DiagrammeR::create_graph(nodes_df = ndf, edges_df = edf, attr_theme = NULL) %>%
+    DiagrammeR::add_global_graph_attrs(attr = "rankdir", value =  "LR", attr_type =  "graph")
   DiagrammeR::export_graph(g, file_name = file_name, file_type = file_type, title = title,
                            width = width, height = height)
   invisible()
@@ -138,6 +137,7 @@ chart_satellites <- function(file_name, context = "all", selected = NULL,
 #'
 #' @param base_path output directory.
 #' @param width numeric, icon width.
+#' @param height numeric, icon height.
 #'
 #' @return side effect of writing files.
 #' @export
@@ -150,7 +150,7 @@ make_pkg_icons <- function(base_path = ".", width = 400, height = 200){
   clrs <- c("Chartreuse3", "DarkOrchid", "Orange", "DodgerBlue", "#555555")[match(pkgs$type, types)]
   purrr::walk2(pkgs$pkg, clrs,
   ~({
-    file_name <- paste0(base_path, "/pkg_icon_", .x, ".svg")
+    file_name <- paste0(base_path, "/pkg_icon_", .x, ".svg") # nolint
     DiagrammeR::create_node_df(
       n = 1, type = "a", label = .x, fillcolor = .y, style = "filled", color = .y,
       fontcolor = "white", shape = "rectangle", fontname = "arial", fixedsize = TRUE, width = 1) %>%

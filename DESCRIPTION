@@ -18,7 +18,8 @@ Imports:
     DiagrammeR,
     snapmeta,
     magrittr,
-    dplyr
+    dplyr,
+    purrr
 Suggests: 
     testthat,
     knitr,

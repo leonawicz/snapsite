@@ -10,6 +10,8 @@ make_pkg_icons(base_path = ".", width = 400, height = 200)
 \item{base_path}{output directory.}
 
 \item{width}{numeric, icon width.}
+
+\item{height}{numeric, icon height.}
 }
 \value{
 side effect of writing files.
