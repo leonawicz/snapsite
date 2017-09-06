@@ -4,7 +4,7 @@
 \alias{make_pkg_icons}
 \title{Make package icons}
 \usage{
-make_pkg_icons(base_path = ".", width = 200)
+make_pkg_icons(base_path = ".", width = 300)
 }
 \arguments{
 \item{base_path}{output directory.}
