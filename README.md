@@ -8,7 +8,7 @@ snapsite
 `snapsite` contains a collection of utility functions for the development, maintenance and refinement of `pkgdown`-derived documentation across multiple SNAPverse packages. The core of the documentation for a SNAPverse package is based around pkgdown, which builds documentation for each package individually. The `snapsite` package assists with thematic tweaks and cohesive, standardized integration across multiple packages in the verse, helping to bring the SNAPverse together. It is not relevant to the SNAPverse outside of this development context. `snapsite` is a satellite package in the verse with `snapmeta` being the only SNAPverse package it is dependent on. It is not required by any other packages.
 
 <p style="text-align:center;">
-<img src="man/figures/sv_satellites_dev.png">
+<img src="man/figures/sv_satellites_dev.png" width=350>
 </p>
 <br>
 
@@ -18,7 +18,7 @@ Installation
 You can install snapsite from github with:
 
 ``` r
-# install.packages("devtools")
+# install.packages('devtools')
 devtools::install_github("leonawicz/snapsite")
 ```
 
