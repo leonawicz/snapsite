@@ -15,8 +15,9 @@
 #'
 #' @examples
 #' \dontrun{
-#' chart_verse(file_name = "sv_all.svg",
-#'   title = "Simplified overview of the SNAPverse")
+#' x <- "Simplified overview of the SNAPverse"
+#' chart_verse(file_name = "sv_all.svg", title = x)
+#' chart_verse(file_name = "sv_all.png", title = x, width = 800)
 #' }
 chart_verse <- function(file_name, context = "complete", title = NULL,
                         file_type = NULL, width = 350, height = NULL){
