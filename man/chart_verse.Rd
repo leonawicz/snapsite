@@ -29,7 +29,8 @@ Other arguments are passed to \code{DiagrammeR::export_graph}.
 }
 \examples{
 \dontrun{
-chart_verse(file_name = "sv_all.svg",
-  title = "Simplified overview of the SNAPverse")
+x <- "Simplified overview of the SNAPverse"
+chart_verse(file_name = "sv_all.svg", title = x)
+chart_verse(file_name = "sv_all.png", title = x, width = 800)
 }
 }
