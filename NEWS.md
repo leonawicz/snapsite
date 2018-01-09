@@ -1,6 +1,7 @@
+# snapsite 0.1.0
+
+* Updated function to support new SNAPverse package list.
+
 # snapsite 0.0.0.9000
 
-* Added a `NEWS.md` file to track changes to the package.
-
-
-
+* Set up package scaffolding.

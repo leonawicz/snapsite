@@ -1,5 +1,5 @@
 Package: snapsite
-Version: 0.0.0.9000
+Version: 0.1.0
 Title: Develop, Maintain And Refine SNAPverse Documentation
 Description: This package provides a collection of utility functions for the development, maintenance and refinement of documentation
     for SNAPverse packages. The core of the documentation for a SNAPverse package is based around pkgdown, which builds documentation
@@ -16,7 +16,6 @@ Url: https://github.com/leonawicz/snapsite
 BugReports: https://github.com/leonawicz/snapsite/issues
 Imports: 
     DiagrammeR,
-    snapmeta,
     magrittr,
     dplyr,
     purrr
@@ -25,7 +24,5 @@ Suggests:
     knitr,
     rmarkdown,
     covr
-Remotes:
-    leonawicz/snapmeta
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
