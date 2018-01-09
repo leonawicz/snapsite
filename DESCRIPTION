@@ -18,11 +18,14 @@ Imports:
     DiagrammeR,
     magrittr,
     dplyr,
-    purrr
+    purrr,
+    snapmeta
 Suggests: 
     testthat,
     knitr,
     rmarkdown,
     covr
+Remotes:
+    leonawicz/snapmeta
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
