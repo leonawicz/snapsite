@@ -20,5 +20,5 @@ side effect of writing files.
 Make package icon svg thumbail files.
 }
 \examples{
-\dontrun{make_pkg_icons}
+\dontrun{make_pkg_icons()}
 }
