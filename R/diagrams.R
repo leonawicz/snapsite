@@ -144,7 +144,7 @@ chart_satellites <- function(file_name, context = "all", selected = NULL,
 #' @export
 #'
 #' @examples
-#' \dontrun{make_pkg_icons}
+#' \dontrun{make_pkg_icons()}
 make_pkg_icons <- function(base_path = ".", width = 400, height = 200){
   pkgs <- snapmeta::sv_pkgs()
   types <- unique(pkgs$type)
